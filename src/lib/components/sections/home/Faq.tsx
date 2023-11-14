@@ -9,8 +9,29 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { MdAdd, MdRemove } from 'react-icons/md';
-
-export const DropAccordion = ({ title, message}) => (
+import Link from 'next/link';
+const DownloadPage = () => {
+  return (
+    <Box>
+      {/* <Text>Download PDF</Text> */}
+      <a href="/assets/mandate.pdf" download>
+        <Text
+        style={{
+          textDecoration: 'none', // Remove underline
+          color: 'blue', // Text color
+          backgroundColor: 'lightblue', // Background color
+          padding: '8px 16px', // Padding
+          borderRadius: '4px', // Border radius
+          border: 'none', // Remove border
+          cursor: 'pointer', // Change cursor on hover
+        }}>
+        click to Download PDF</Text>
+      </a>
+    </Box>
+  );
+};
+const DropAccordion = ({ title, message }: { title: string, message: string | JSX.Element }) => (
+  // Your component code
   <AccordionItem
     fontSize="1rem"
     borderLeftWidth="1px"
@@ -61,15 +82,6 @@ export const DropAccordion = ({ title, message}) => (
         </AccordionPanel>
       </>
 
-
-
-
-
-
-
-
-
-
     )}
   </AccordionItem>
 );
@@ -87,7 +99,7 @@ const Faq = () => (
       <Heading fontSize="2.5rem" color="brand.200" fontWeight="700" mb={4}>
         FAQs
       </Heading>
-      <Heading
+      {/* <Heading
         fontSize={['1rem', '1.1rem']}
         color="brand.100"
         fontWeight="800"
@@ -95,8 +107,8 @@ const Faq = () => (
         textAlign="center"
       >
         Quam lacus suspendisse faucibus interdum posuere
-      </Heading>
-      <Text
+      </Heading> */}
+      {/* <Text
         fontSize={['.8rem', '1rem']}
         color="brand.200"
         textAlign="center"
@@ -104,12 +116,12 @@ const Faq = () => (
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
-      </Text>
+      </Text> */}
     </VStack>
     <VStack w="full">
       <Accordion allowToggle w="full">
         <DropAccordion
-        title="What does FlyPal do?" message="FlyPal is committed to help airline passengers with problems with their flight. Based on the NCAA Consumer Protection Part 19 regulation and our unique database, we help passengers to get their compensation for a flight delay, flight cancellation, missed connection or when they were denied to board."/>
+        title={"What does FlyPal do?"} message="FlyPal is committed to help airline passengers with problems with their flight. Based on the NCAA Consumer Protection Part 19 regulation and our unique database, we help passengers to get their compensation for a flight delay, flight cancellation, missed connection or when they were denied to board."/>
          <DropAccordion
         title="	Why choose FlyPal?" message="We have built a broad expertise in the field of passenger rights. As a result, we have established a good reputation and working relationships with airlines. With our unique extensive in-house database of historical flight, weather and other relevant data, we are in a good position to resolve your flight claim more efficiently and effectively than anyone else."/>
          <DropAccordion
@@ -124,7 +136,7 @@ const Faq = () => (
             <li>Booking conformation</li>
             <li>E-Ticket(s)</li>
             <li>Boarding Pass(es)</li>
-            <li>Completed FLYPAL Mandate Form</li>
+            <li>Completed FLYPAL Mandate Form <DownloadPage/></li>
           </ul>
                       You can upload these documents directly when submitting your claim. It is also possible to add them to your online file later.</div>}
         />

@@ -14,9 +14,12 @@ import React from 'react';
 
 function Locations() {
   return (
-    <Box w="full" bgColor="white">
-      <Container maxW="90%">
-        <Flex
+    <Box w="full" bgColor="white"  textAlign="center" >
+      <Container maxW="90%"  >
+            <Text as="span"  color="#007F82" display="inline" fontSize="3rem" fontWeight="bold" >
+            ALL AIRLINES,ALL LOCATIONS SUPPORTED
+            </Text>
+        {/* <Flex
           width="full"
           height="fit-content"
           my="4rem"
@@ -35,8 +38,8 @@ function Locations() {
               mb="1rem"
               mx={['auto', 'unset']}
             >
-              <Text fontSize=".8rem" color="brand.200">
-                All the airlines we support
+              <Text fontWeight='bold' fontSize=".8rem" color="brand.200">
+                All airlines 
               </Text>
             </Flex>
             <Grid
@@ -68,8 +71,8 @@ function Locations() {
               mx={['auto', 'unset']}
               mt={['2.5rem', '0']}
             >
-              <Text fontSize=".8rem" color="brand.200" mx={['auto', 'unset']}>
-                Locations
+              <Text fontWeight='bold' fontSize=".8rem" color="brand.200" mx={['auto', 'unset']}>
+                Locations we support
               </Text>
             </Flex>
             <Grid
@@ -90,7 +93,7 @@ function Locations() {
               <Locate area="Kano" />
             </Grid>
           </VStack>
-        </Flex>
+        </Flex> */}
       </Container>
     </Box>
   );

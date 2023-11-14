@@ -40,12 +40,12 @@ function GetStarted() {
   const id = 5;
 
   const isUser = Cookies.get('user');
-  useEffect(() => {
-    if (isUser !== 'true') {
-      router.push({ pathname: '/auth', query: { from: router.pathname } });
-      return;
-    }
-  });
+  // useEffect(() => {
+  //   if (isUser !== 'true') {
+  //     router.push({ pathname: '/auth', query: { from: router.pathname } });
+  //     return;
+  //   }
+  // });
 
   const {
     handleSubmit,

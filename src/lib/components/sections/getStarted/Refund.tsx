@@ -9,6 +9,8 @@ import { PrimaryTextarea } from 'lib/components/Utilities/Textarea';
 import { PrimaryDate } from 'lib/components/Utilities/PrimaryDate';
 import { PrimarySelect } from 'lib/components/Utilities/PrimarySelect';
 import { airports } from 'lib/components/Utilities/airport';
+import React, { useState } from 'react';
+
 
 function Refund({
   register,
@@ -23,7 +25,7 @@ function Refund({
   const airport = isInternational
     ? airports.internationalairports
     : airports.domesticairports;
-
+    
   const toggleAirportType = () => {
     setIsInternational(!isInternational);
   };
@@ -88,7 +90,7 @@ function Refund({
                 error={errors.departureLocation}
                 control={control}
                 icon={GiAirplaneDeparture}
-                options={airports}
+                options={airport}
                 placeholder="Abuja Airport"
               />
             </GridItem>

@@ -44,10 +44,10 @@ function GetStarted() {
 
   const isUser = Cookies.get('user');
   useEffect(() => {
-    if (isUser !== 'true') {
-      router.push({ pathname: '/auth', query: { from: router.pathname } });
-      return;
-    }
+    // if (isUser !== 'true') {
+    //   router.push({ pathname: '/auth', query: { from: router.pathname } });
+    //   return;
+    // }
   });
 
   const {

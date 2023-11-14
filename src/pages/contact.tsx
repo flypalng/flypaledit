@@ -39,6 +39,17 @@ function contact() {
     resolver: yupResolver(schema),
     mode: 'all',
   });
+   // Function to handle the email button click
+   const handleEmailClick = () => {
+    // You can use the 'window.location' object to open the default email client
+    window.location.href = 'mailto:askus@flypal.ng';
+  };
+
+  // Function to handle the call button click
+  const handleCallClick = () => {
+    // You can use the 'window.location' object to initiate a phone call
+    window.location.href = 'tel:+2347034110627'; // Replace with the desired phone number
+  };
 
   const onSubmit = async (data: ContactData) => {
     // data.message = message;
@@ -83,20 +94,32 @@ function contact() {
       // marginBottom={['0rem','10rem']}
     >
       <Flex alignItems="center" w="full">
-        <VStack w="full" h="full" display={['none', 'flex']}>
+        <VStack w="full" h="full">
           <Box
             width="full"
             h="800px"
             bg="linear-gradient(0.22deg, #1B345B 7.56%, rgba(27, 52, 91, 0) 158.89%), url(/assets/contact.png)"
             display="flex"
             flexDirection="column"
-            justifyContent="space-between"
+            // justifyContent="space-between"
             p="5rem 0"
+            marginBottom={['-12rem','0rem']}
+            justifyContent="center"  /* Center vertically */
+            alignItems="center"      /* Center horizontally */
+            sx={{
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              
+            }}
+            
+            
+            // background-size='cover'
+  // background-position= 'center'
+  // background-repeat= 'no-repeat'
           >
-          </Box>
-        </VStack>
-        <VStack
-          w="full"
+             <VStack
+          // w="full"
           align={['center', 'flex-start']}
           ml={['0', '4rem']}
           mb={['2rem', '0']}
@@ -104,8 +127,10 @@ function contact() {
           <Text
             fontSize={{ base: '2rem', md: '2rem' }}
             color="brand.100"
+            w={['80%', 'full']}
             // mb={5}
-            textAlign={['center', 'left']}
+            textAlign={['center', 'center']}
+
           >
             Say hi! 👋
           </Text>
@@ -113,115 +138,24 @@ function contact() {
             fontSize={['18px', '18px']}
             color="black"
             w={['80%', 'full']}
-            textAlign={['center', 'left']}
+            textAlign={['center', 'center']}
           >
             Send us a note and we’ll get back to you as soon as possible.
           </Text>
-          <form
-            onSubmit={handleSubmit(onSubmit, (errors) => console.log(errors))}
-          >
-            <SimpleGrid
-              columns={2}
-              rowGap="4"
-              columnGap={['2', '4']}
-              w={['full', '90%']}
-              mt="2rem !important"
-            >
-              <GridItem
-                colSpan={2}
-                background={['unset', 'rgba(226, 232, 240, 0.3)']}
-                borderRadius="5px"
-                p={['.5rem 2rem', '1rem 2rem']}
-              >
-                <PrimaryInput<ContactData>
-                  register={register}
-                  name="email"
-                  error={errors.email}
-                  defaultValue=""
-                  label="Email"
-                  placeholder="Chigozie@gmail.com"
-                  padding="1rem"
-                  w="0"
-                />
-              </GridItem>
-              <GridItem colSpan={2}>
-                <SimpleGrid
-                  columns={2}
-                  rowGap="3"
-                  columnGap={['2', '2']}
-                  w="full"
-                  background={['unset', 'rgba(226, 232, 240, 0.3)']}
-                >
-                  <GridItem
-                    colSpan={[2, 1]}
-                    background={['unset', 'unset']}
-                    borderRadius="5px"
-                    p={['.5rem 2rem', '1rem 2rem']}
-                  >
-                    <PrimaryInput<ContactData>
-                      register={register}
-                      name="name"
-                      error={errors.name}
-                      defaultValue=""
-                      label="Full name"
-                      placeholder="Chigozie"
-                      padding="1rem"
-                      w="0"
-                    />
-                  </GridItem>
-                  <GridItem
-                    colSpan={[2, 1]}
-                    background={['unset', 'unset']}
-                    borderRadius="5px"
-                    p={['.5rem 2rem', '1rem 2rem']}
-                  >
-                    <PrimaryInput<ContactData>
-                      register={register}
-                      name="phone"
-                      error={errors.phone}
-                      defaultValue=""
-                      label="Phone Number"
-                      padding="1rem"
-                      placeholder="0800000000000"
-                      w="0"
-                    />
-                  </GridItem>
-                </SimpleGrid>
-              </GridItem>
-              <GridItem
-                colSpan={2}
-                background={['unset', 'rgba(226, 232, 240, 0.3)']}
-                borderRadius="5px"
-                p={['.5rem 2rem', '1rem 2rem']}
-              >
-                <PrimaryTextarea<ContactData>
-                  label="Message"
-                  register={register}
-                  error={errors.message}
-                  defaultValue={''}
-                  placeholder="Type your message here"
-                  name="message"
-                />
-              </GridItem>
-              <GridItem colSpan={2}>
-                <Flex
-                  w="full"
-                  justify={['center', 'flex-end']}
-                  mt={['2rem', '0']}
-                >
-                  <Button
-                    variant="solid"
-                    type="submit"
-                    isLoading={loading}
-                    // disabled={!isValid}
-                  >
-                    Proceed
-                  </Button>
-                </Flex>
-              </GridItem>
-            </SimpleGrid>
-          </form>
+         
+        {/* Buttons for email and call */}
+       
+          <Box textAlign={['center', 'center']}
+          w={['80%', 'full']}
+          ><Button onClick={handleEmailClick}>Email Us</Button></Box>
+        <Box
+        textAlign={['center', 'center']}
+        w={['80%', 'full']}
+        ><Button onClick={handleCallClick}>Call Us</Button></Box>
         </VStack>
+          </Box>
+        </VStack>
+       
       </Flex>
     </Flex>
    

@@ -155,21 +155,22 @@ function Header() {
                   </Box>
                 )}
               </>
-              
-                <Box display={{ base: 'none', md: 'block' }}>
-                  <Button
-                    variant="outline"
-                    cursor="pointer"
-                    ml="2rem"
-                    px="0, 2rem"
-                    fontSize={15}
-                    variant="outline"
-                    onClick={() => scrollTo({ top: 800, left: 0, behavior: 'smooth' })}
-                  >
-                   check compensation
-                  </Button>
-                </Box>
-              
+
+              <Box display={{ base: 'none', md: 'block' }}>
+                <Button
+                  variant="outline"
+                  cursor="pointer"
+                  ml="2rem"
+                  px="0, 2rem"
+                  fontSize={15}
+                  // variant="outline"
+                  onClick={() =>
+                    scrollTo({ top: 800, left: 0, behavior: 'smooth' })
+                  }
+                >
+                  check compensation
+                </Button>
+              </Box>
             </Flex>
           </Box>
         </Flex>

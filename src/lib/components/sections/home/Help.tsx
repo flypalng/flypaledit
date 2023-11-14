@@ -35,8 +35,7 @@ function Help() {
               textAlign="center"
               w="90%"
             >
-              As the world’s largest flight compensation company, we work across
-              more countries, and can help in more situations than anyone else.
+              As a pioneer of flight compensation in Nigeria, we are well positioned to support you with your claim requests for both domestic and international flights. 
             </Text>
           </VStack>
           <Grid
@@ -46,35 +45,36 @@ function Help() {
           >
             <Cards
               icon={GiCancel}
-              title="cancelled flights"
+              title="cancelled flights? We’re here to help. "
               categoryId={1}
               link="cancelled-flights"
               note="Flight cancelled with little notice? You could be entitled to up to ₦50,520 compensation on top of your refund."
             />
             <Cards
               icon={MdFlight}
-              title="flight delayed"
+              title="Flight Delayed? We’re here to help. "
               categoryId={2}
               link="flight-delayed"
               note="Flight cancelled with little notice? You could be entitled to up to ₦50,520 compensation on top of your refund."
             />
             <Cards
               icon={GiWorld}
-              title="denied boarding"
+              title="denied boarding? We’re here to help. "
               categoryId={3}
-              link="denied-boarding"
+              link="denied-boarding? We’re here to help. "
               note="Flight cancelled with little notice? You could be entitled to up to ₦50,520 compensation on top of your refund."
             />
             <Cards
               icon={MdCardTravel}
-              title="baggage claim"
+              title="baggage problem?
+               We’re here to help. "
               categoryId={4}
               link="baggage-claim"
               note="Flight cancelled with little notice? You could be entitled to up to ₦50,520 compensation on top of your refund."
             />
             <Cards
               icon={MdWifiProtectedSetup}
-              title="refund"
+              title="want refund? We’re here to help. "
               categoryId={5}
               link="refund-claim"
               note="Flight cancelled with little notice? You could be entitled to up to ₦50,520 compensation on top of your refund."

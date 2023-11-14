@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react';
 import 'animate.css';
 import { useScrollTo } from 'react-use-window-scroll';
+import Denied from '../getStarted/Denied';
 
 function Hero() {
   const scrollTo = useScrollTo();
@@ -36,8 +37,13 @@ function Hero() {
             pos="relative"
             className="animate__animated animate__fadeInUp"
           >
-            WAS YOUR <br></br> FLIGHT <Text as="span" color="#007F82" display="inline">
-           DELAYED<br></br>OR CANCELLED?
+            Flight Delayed?<br></br> Boarding
+            <Text as="span" color="#007F82" display="inline">
+              Denied?<br></br>Baggage Problem? <br></br>We’re here to help.<br></br>
+              
+            </Text>
+            <Text as="span" color="#007F82" display="inline"  fontSize={['1rem', '1rem']}>
+             Discover a smoother experience with FlyPal
             </Text>
           </Heading>
           <Button
@@ -61,7 +67,7 @@ function Hero() {
             borderRadius="40px"
             overflow="hidden"
             zIndex="2"
-            marginLeft='-30'
+            marginLeft="-30"
           >
             <Image src="/assets/hero.jpg" objectFit="cover" height="full" />
           </Box>

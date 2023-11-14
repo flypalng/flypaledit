@@ -9,9 +9,9 @@ function Airlines({ name, url }: CardsType) {
   return (
     <GridItem w="100%">
       <Flex align="center" flexDirection={['column', 'row']}>
-        <Image src={url} />
-        <Text fontSize={['.7rem', '.8rem']} color="brand.600" pl=".3rem">
-          {name}
+        {/* <Image src={url} /> */}
+        <Text fontWeight="bold" fontSize={['.7rem', '.8rem']} color="brand.600" pl=".3rem">
+          {/* {name} */}
         </Text>
       </Flex>
     </GridItem>

@@ -1,0 +1,104 @@
+ {/* <form
+            onSubmit={handleSubmit(onSubmit, (errors) => console.log(errors))}
+          >
+            <SimpleGrid
+              columns={2}
+              rowGap="4"
+              columnGap={['2', '4']}
+              w={['full', '90%']}
+              mt="2rem !important"
+            >
+              <GridItem
+                colSpan={2}
+                background={['unset', 'rgba(226, 232, 240, 0.3)']}
+                borderRadius="5px"
+                p={['.5rem 2rem', '1rem 2rem']}
+              >
+                <PrimaryInput<ContactData>
+                  register={register}
+                  name="email"
+                  error={errors.email}
+                  defaultValue=""
+                  label="Email"
+                  placeholder="Chigozie@gmail.com"
+                  padding="1rem"
+                  w="0"
+                />
+              </GridItem>
+              <GridItem colSpan={2}>
+                <SimpleGrid
+                  columns={2}
+                  rowGap="3"
+                  columnGap={['2', '2']}
+                  w="full"
+                  background={['unset', 'rgba(226, 232, 240, 0.3)']}
+                >
+                  <GridItem
+                    colSpan={[2, 1]}
+                    background={['unset', 'unset']}
+                    borderRadius="5px"
+                    p={['.5rem 2rem', '1rem 2rem']}
+                  >
+                    <PrimaryInput<ContactData>
+                      register={register}
+                      name="name"
+                      error={errors.name}
+                      defaultValue=""
+                      label="Full name"
+                      placeholder="Chigozie"
+                      padding="1rem"
+                      w="0"
+                    />
+                  </GridItem>
+                  <GridItem
+                    colSpan={[2, 1]}
+                    background={['unset', 'unset']}
+                    borderRadius="5px"
+                    p={['.5rem 2rem', '1rem 2rem']}
+                  >
+                    <PrimaryInput<ContactData>
+                      register={register}
+                      name="phone"
+                      error={errors.phone}
+                      defaultValue=""
+                      label="Phone Number"
+                      padding="1rem"
+                      placeholder="0800000000000"
+                      w="0"
+                    />
+                  </GridItem>
+                </SimpleGrid>
+              </GridItem>
+              <GridItem
+                colSpan={2}
+                background={['unset', 'rgba(226, 232, 240, 0.3)']}
+                borderRadius="5px"
+                p={['.5rem 2rem', '1rem 2rem']}
+              >
+                <PrimaryTextarea<ContactData>
+                  label="Message"
+                  register={register}
+                  error={errors.message}
+                  defaultValue={''}
+                  placeholder="Type your message here"
+                  name="message"
+                />
+              </GridItem>
+              <GridItem colSpan={2}>
+                <Flex
+                  w="full"
+                  justify={['center', 'flex-end']}
+                  mt={['2rem', '0']}
+                >
+                  <Button
+                    variant="solid"
+                    type="submit"
+                    isLoading={loading}
+                    // disabled={!isValid}
+                  >
+                    Proceed
+                  </Button>
+                </Flex>
+              </GridItem>
+            </SimpleGrid>
+          </form> */}
